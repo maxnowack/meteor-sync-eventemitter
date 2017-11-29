@@ -1,0 +1,53 @@
+{
+  "name": "meteor-sync-eventemitter",
+  "version": "1.0.0",
+  "description": "Allows syncing event emitter events over multiple meteor servers.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "./node_modules/.bin/babel src -d dist",
+    "lint": "./node_modules/.bin/eslint src",
+    "copy": "npm link && cd tests && npm link meteor-sync-eventemitter",
+    "test": "npm run copy && cd tests && TEST_BROWSER_DRIVER=nightmare meteor test -p 3100 --once --driver-package dispatch:mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxnowack/meteor-sync-eventemitter.git"
+  },
+  "author": "Max Nowack <max@unsou.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxnowack/meteor-sync-eventemitter/issues"
+  },
+  "homepage": "https://github.com/maxnowack/meteor-sync-eventemitter#readme",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "meteor",
+    "sync",
+    "eventemitter"
+  ],
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "parser": "babel-eslint"
+  },
+  "dependencies": {
+    "meteor-globals": "^1.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
