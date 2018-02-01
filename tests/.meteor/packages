@@ -22,3 +22,4 @@ practicalmeteor:chai
 dispatch:mocha
 reactive-dict@1.2.0
 dynamic-import@0.2.0
+rocketchat:streamer

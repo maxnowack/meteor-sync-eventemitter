@@ -27,9 +27,19 @@
     "sync",
     "eventemitter"
   ],
+  "engines": {
+    "node": ">=8"
+  },
   "babel": {
     "presets": [
-      "env"
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8"
+          }
+        }
+      ]
     ]
   },
   "eslintConfig": {
