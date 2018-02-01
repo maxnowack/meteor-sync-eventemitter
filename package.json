@@ -1,6 +1,6 @@
 {
   "name": "meteor-sync-eventemitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows syncing event emitter events over multiple meteor servers.",
   "main": "dist/index.js",
   "scripts": {
