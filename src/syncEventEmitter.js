@@ -50,7 +50,6 @@ export default function syncEventEmitter(syncer, emitFn = 'emit') {
           if (this.syncedIds.indexOf(id) > -1) {
             // delete if event is from current instance
             this.syncedIds = this.syncedIds.filter(item => item !== id);
-            syncer.remove(id);
             return;
           }
 
